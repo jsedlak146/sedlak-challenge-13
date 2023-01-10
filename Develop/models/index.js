@@ -17,14 +17,14 @@ Product.belongsToMany(Tag, {
   through: {
     model: ProductTag, //this is example of pulling in 3rd table, only assocation
   },
-  as: 'product_tag'
+  as: 'product_tags'
 });
 // Tags belongToMany Products (through ProductTag)
 Tag.belongsToMany(Product, {
   through: {
     model: ProductTag,
   },
-  as: 'product_tag'
+  as: 'tag_product'
 });
 
 module.exports = {
